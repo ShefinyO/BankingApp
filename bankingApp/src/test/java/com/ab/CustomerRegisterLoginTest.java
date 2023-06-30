@@ -56,8 +56,7 @@ class CustomerRegisterLoginTest {
 		
 		//Act
 		
-		Customer actualC = customerRepository.checkLoginCredentials(c.getEmail(), c.getPassword());
-		
+		Customer actualC = customerRegisterLoginService.loginCustomer(c);
 		//Assert
 		
 		assertEquals(expectedC, actualC);
@@ -77,7 +76,7 @@ class CustomerRegisterLoginTest {
 		
 		//Act
 		
-		Customer result = customerRepository.checkLoginCredentials(c.getEmail(), c.getPassword());
+		Customer result = customerRegisterLoginService.loginCustomer(c);
 		
 		//Assert
 		
@@ -98,7 +97,7 @@ class CustomerRegisterLoginTest {
 		
 		//Act
 		
-		Customer result = customerRepository.checkLoginCredentials(c.getEmail(), c.getPassword());
+		Customer result = customerRegisterLoginService.loginCustomer(c);
 		
 		//Assert
 		

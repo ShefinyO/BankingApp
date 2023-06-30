@@ -35,7 +35,7 @@ class PrizeServiceTest {
 		Prize rp = new Prize("Amazon Voucher");
 		rp.setPrizeId(1);
 		
-		when(prizeService.createPrize(p)).thenReturn(rp);
+		when(prizeRepository.save(p)).thenReturn(rp);
 		
 		//Act
 		
